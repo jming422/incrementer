@@ -2,6 +2,7 @@
   (:require [incrementer.cljc.routes :as routes]
             [incrementer.cljs.views.blog :as blog]
             [incrementer.cljs.views.account :as account]
+            [incrementer.cljs.views.counter :as counter]
             [incrementer.cljs.views.components :as c]
             [reagent.session :as session]))
 
@@ -22,7 +23,8 @@
    :login account/login
    :four-o-four four-o-four
    :blog blog/blog
-   :blog-entry blog/blog-entry})
+   :blog-entry blog/blog-entry
+   :counter counter/counter})
 
 (defn page-contents [route]
       (let [page (:current-page route)

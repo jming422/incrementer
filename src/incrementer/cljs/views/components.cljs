@@ -28,6 +28,7 @@
           [:header.white.cf.bg-dark-gray.tracked-mega.small-caps
            [header-link (routes/page :index) "Home" "fl"]
            [header-link (routes/page :blog) "Blog" "fl"]
+           [header-link (routes/page :counter) "Counter" "fl"]
            [welcome-message @m/session]]))
 
 (defn loading-spinner []

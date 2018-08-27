@@ -7,8 +7,9 @@
             (u/page "" :index)
             (u/page "login" :login)
             (u/context "blog"
-                       (u/page "/" :blog)
-                       (u/page ["/entry/" :id] :blog-entry))))
+              (u/page "/" :blog)
+              (u/page ["/entry/" :id] :blog-entry))
+            (u/page "counter" :counter)))
 
 (def api-routes
   (u/router "/api/v1"
