@@ -1,13 +1,14 @@
 (ns incrementer.cljs.views.counter
   (:require [incrementer.cljc.routes :as routes]
             [incrementer.cljs.views.components :as c]
-            [incrementer.cljs.models.counter :as ct]))
+            [incrementer.cljs.models.counter :as m]
+            [incrementer.cljs.controllers.counter :as ctrl]))
 
 (defn counter [params]
       [:div
        [:h1 "incrementer: Counter"]
-       (if @ct/count-atom
+       (if @m/counter
          [:div
-          [:h3 @ct/count-atom]
-          [c/button "Do the thing" (fn [] (swap! ct/count-atom inc))]]
+          [:h3 @m/counter]
+          [c/button "Do the thing" #(ctrl/modify inc)]]
          [c/loading-spinner])])
