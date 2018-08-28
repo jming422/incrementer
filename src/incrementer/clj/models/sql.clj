@@ -12,6 +12,7 @@
 
 (hug/def-db-fns "incrementer/sql/articles.sql")
 (hug/def-db-fns "incrementer/sql/users.sql")
+(hug/def-db-fns "incrementer/sql/counters.sql")
 
 (defn init! []
       (let [dev-mode? (= "true" (environ/env :dev-database))]
