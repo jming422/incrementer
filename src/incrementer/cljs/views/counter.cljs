@@ -9,6 +9,6 @@
        [:h1 "incrementer: Counter"]
        (if @m/counter
          [:div
-          [:h3 @m/counter]
-          [c/button "Do the thing" #(ctrl/modify inc)]]
+          [:h3 (:val @m/counter)]
+          [c/button "Do the thing" #(ctrl/inc-counter)]]
          [c/loading-spinner])])

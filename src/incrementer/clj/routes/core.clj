@@ -8,6 +8,7 @@
             [incrementer.clj.routes.middleware :as middleware]
             [incrementer.clj.routes.blog :as blog]
             [incrementer.clj.routes.account :as account]
+            [incrementer.clj.routes.counter :as counter]
             [incrementer.clj.views.core :as views]
             [incrementer.cljc.routes :as routing]
             [incrementer.cljc.validators :as v]
@@ -23,7 +24,9 @@
    :blog blog/blog-entries
    :blog-entry blog/blog-entry
    :new-blog-entry blog/new-blog-entry
-   :delete-blog-entry blog/delete-blog-entry})
+   :delete-blog-entry blog/delete-blog-entry
+   :counter counter/counter
+   :inc-counter counter/inc-counter})
 
 (defn page-handler [request handler-name]
       {:status  200
