@@ -3,7 +3,7 @@
 select * from counters
 where counter_id = :id;
 
--- :name modify-counter
+-- :name update-counter
 -- :command :execute
 -- :result :affected
 update counters

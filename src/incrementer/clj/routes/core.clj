@@ -3,6 +3,7 @@
             [ring.middleware.file :as file]
             [ring.middleware.content-type :as ct]
             [ring.middleware.resource :as resource]
+            [ring.middleware.params :as params]
             [incrementer.clj.roles.core :as roles]
             [incrementer.clj.utils.core :as u]
             [incrementer.clj.routes.middleware :as middleware]
@@ -26,7 +27,7 @@
    :new-blog-entry blog/new-blog-entry
    :delete-blog-entry blog/delete-blog-entry
    :counter counter/counter
-   :inc-counter counter/inc-counter})
+   :modify-counter counter/modify-counter})
 
 (defn page-handler [request handler-name]
       {:status  200
@@ -63,4 +64,5 @@
       (json/wrap-json-response)
       (json/wrap-json-body {:keywords? true})
       (roles/wrap-security)
-      (ct/wrap-content-type)))
+      (ct/wrap-content-type)
+      (params/wrap-params)))

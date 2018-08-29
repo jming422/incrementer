@@ -44,6 +44,11 @@
        {:on-click on-click}
        text])
 
+(defn cool-button [text on-click]
+  [:button.pointer.grow.w-100.bg-washed-blue.b--navy.ba.bw1.tc.pv2.b
+    {:on-click on-click}
+    text])
+
 (def input-default-style {})
 
 (def input-default-classes "b--light-gray")
