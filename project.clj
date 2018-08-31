@@ -17,7 +17,7 @@
   :aliases {"brevity" ["run" "-m" "brevity.core/handle-commands" :project/main]}
   :resource-paths ["resources"]
   :main ^:skip-aot incrementer.clj.core
-  :dependencies [[org.clojure/clojure "LATEST"]
+  :dependencies [[org.clojure/clojure "1.9.0"]
                  [org.immutant/web "LATEST"]
                  [ring/ring-core "LATEST"]
                  [ring/ring-devel "LATEST"]
